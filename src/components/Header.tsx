@@ -9,7 +9,7 @@ export const Header = () => {
   return (
     <header
       id="header"
-      className=" flex content-center bg-slate-50 h-screen relative"
+      className=" flex content-center bg-slate-50 h-screen relative overflow-hidden"
     >
       <nav className="container mx-auto px-4 py-8  flex justify-between fixed left-0 right-0 top-0 z-20">
         <Link href="/">
