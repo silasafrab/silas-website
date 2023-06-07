@@ -3,21 +3,22 @@ import * as React from 'react';
 function IconMenu(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
+      width="44"
+      height="44"
+      viewBox="0 0 44 44"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect x="6" y="6" width="2" height="2" fill="#FAFAFA" />
-      <rect x="6" y="11" width="2" height="2" fill="#FAFAFA" />
-      <rect x="6" y="16" width="2" height="2" fill="#FAFAFA" />
-      <rect x="11" y="6" width="2" height="2" fill="#FAFAFA" />
-      <rect x="11" y="11" width="2" height="2" fill="#FAFAFA" />
-      <rect x="11" y="16" width="2" height="2" fill="#FAFAFA" />
-      <rect x="16" y="6" width="2" height="2" fill="#FAFAFA" />
-      <rect x="16" y="11" width="2" height="2" fill="#FAFAFA" />
-      <rect x="16" y="16" width="2" height="2" fill="#FAFAFA" />
+      <rect width="44" height="44" fill="black" />
+      <rect x="14" y="14" width="4" height="4" fill="#FAFAFA" />
+      <rect x="14" y="20" width="4" height="4" fill="#FAFAFA" />
+      <rect x="14" y="26" width="4" height="4" fill="#FAFAFA" />
+      <rect x="20" y="14" width="4" height="4" fill="#FAFAFA" />
+      <rect x="20" y="20" width="4" height="4" fill="#FAFAFA" />
+      <rect x="20" y="26" width="4" height="4" fill="#FAFAFA" />
+      <rect x="26" y="14" width="4" height="4" fill="#FAFAFA" />
+      <rect x="26" y="20" width="4" height="4" fill="#FAFAFA" />
+      <rect x="26" y="26" width="4" height="4" fill="#FAFAFA" />
     </svg>
   );
 }

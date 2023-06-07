@@ -27,7 +27,8 @@
 
 h1,
 h2,
-h3 {
+h3,
+.monument {
   font-family: 'monument';
   letter-spacing: 0.005em !important;
   line-height: 150% !important;

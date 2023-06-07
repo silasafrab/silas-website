@@ -4,7 +4,7 @@ import IconWhatsapp from './icons/IconWhatsapp';
 
 export const Contact = () => {
   return (
-    <section id="contact" className="bg-black rounded-b-[60px] mb-24">
+    <section id="contact" className="bg-black  mb-24">
       <div className="container mx-auto px-4 py-24">
         <div className="flex flex-col justify-center">
           <div className="mb-10 ">
