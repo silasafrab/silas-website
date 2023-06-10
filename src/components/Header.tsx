@@ -20,11 +20,11 @@ export const Header = () => {
         <NavMenu />
       </nav>
 
-      <div className="container mx-auto  relative flex items-center justify-center flex-col ">
+      <div className="container mx-auto px-4 py-8 relative flex items-center justify-center flex-col ">
         <div className="w-full font-bold relative">
-          <p className="text-9xl monument  ">FREELANCER</p>
-          <p className="text-9xl text-right monument">DEVELOPER</p>
-          <p className="text-9xl monument">+ DESIGNER</p>
+          <p className="text-4xl md:text-9xl monument  ">FREELANCER</p>
+          <p className="text-4xl md:text-9xl text-right monument">DEVELOPER</p>
+          <p className="text-4xl md:text-9xl monument">+ DESIGNER</p>
           <div className="absolute top-0">
             <FreelancerStroke />
           </div>
@@ -35,7 +35,7 @@ export const Header = () => {
             <DesignerStroke />
           </div>
         </div>
-        <div className="bg-black py-6 px-8  text-white font-bold flex gap-2 hover:bg-black/90 cursor-pointer">
+        <div className="bg-black mt-10 py-6 px-8  text-white font-bold flex gap-2 hover:bg-black/90 cursor-pointer">
           Entre em Contato <ArrowUpRight />
         </div>
       </div>

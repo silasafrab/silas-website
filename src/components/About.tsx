@@ -11,7 +11,7 @@ export const About = () => {
       <div className="container mx-auto px-4 md:px-32 lg:px-32 py-24  ">
         <div className="">
           <p className="text-lg font-bold text-gray-500 mb-3">Sobre mim </p>
-          <h2 className="text-5xl text-gray-800 mb-5">
+          <h2 className="text-lg md:text-5xl text-gray-800 mb-5">
             Conheça o profissional por trás dos projetos{' '}
           </h2>
           <p className="text-lg font-normal">

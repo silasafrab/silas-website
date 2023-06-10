@@ -11,7 +11,7 @@ export const Contact = () => {
             <p className="text-lg font-bold text-gray-400 mb-3 text-center">
               Vamos trabalhar juntos!
             </p>
-            <h2 className="text-5xl md:text-2xl text-gray-50 mb-5 text-center backdrop:bg-gray-50">
+            <h2 className=" text-lg lg:text-5xl md:text-2xl text-gray-50 mb-5 text-center backdrop:bg-gray-50">
               contato@silasafra.com
             </h2>
           </div>
