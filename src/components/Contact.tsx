@@ -4,14 +4,14 @@ import IconWhatsapp from './icons/IconWhatsapp';
 
 export const Contact = () => {
   return (
-    <section id="contact" className="bg-black  mb-24">
+    <section id="contact" className="bg-black  mb-40 lg:mb-32 overflow-hidden">
       <div className="container mx-auto px-4 py-56">
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center items-center ">
           <div className="mb-10 ">
             <p className="text-lg font-bold text-gray-400 mb-3 text-center">
               Vamos trabalhar juntos!
             </p>
-            <h2 className="text-5xl text-gray-50 mb-5 text-center backdrop:bg-gray-50">
+            <h2 className="text-5xl md:text-2xl text-gray-50 mb-5 text-center backdrop:bg-gray-50">
               contato@silasafra.com
             </h2>
           </div>

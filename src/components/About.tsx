@@ -2,13 +2,13 @@ import SilasStroke from './icons/SilasStroke';
 
 export const About = () => {
   return (
-    <section className="relative">
+    <section className="relative overflow-hidden">
       <div className="absolute">
         {' '}
         <SilasStroke />
       </div>
 
-      <div className="container mx-auto px-60 py-24">
+      <div className="container mx-auto px-4 md:px-32 lg:px-32 py-24  ">
         <div className="">
           <p className="text-lg font-bold text-gray-500 mb-3">Sobre mim </p>
           <h2 className="text-5xl text-gray-800 mb-5">
