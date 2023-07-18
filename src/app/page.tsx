@@ -11,7 +11,6 @@ export default function Home() {
       <div className="bg-white">
         <Header />
         <Services />
-        <Portfolio />
         <About />
         <Contact />
       </div>

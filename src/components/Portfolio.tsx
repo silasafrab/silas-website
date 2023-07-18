@@ -1,6 +1,6 @@
 export const Portfolio = () => {
   return (
-    <section className=" bg-black">
+    <section className=" bg-black ">
       <div className="container mx-auto px-4 py-24 bg-black">
         <div className=" grid grid-cols-2 sm:grid-cols-1 gap-6 md:gap-6 ">
           <div className="h-333 w-full ">
@@ -13,29 +13,49 @@ export const Portfolio = () => {
               </p>
             </div>
           </div>
-          <div className="h-96 border-2 overflow-hidden border-gray-700 relative">
-            <div className="bg-slate-300/10 absolute h-full w-full">
-              <p className="text-gray-100">nome do site</p>
+          <div className="flex ">
+            {/* card  */}
+            <div className=" p-20 border border-gray-400 w-full">
+              <img
+                className=""
+                src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template.webp"
+                alt=""
+              />
+              <div className="">
+                <div className="mt-10 flex items-center ">
+                  <span className="bg-white px-2 py-2 text-lg mr-3">01</span>{' '}
+                  <p className="text-white">One Air Parking</p>
+                </div>
+                <p className="text-white mt-8">
+                  Crio sites personalizados e estratégicos para empresas e
+                  startups. Utilizo as melhores ferramentas e estratégias
+                  disponíveis no mercado para garantir que seu site reflita a
+                  identidade da sua marca, aumente sua visibilidade online e
+                  melhore sua presença digital.
+                </p>
+              </div>
             </div>
-            <img
-              className="scale-100 ease-in duration-200 hover:scale-105 "
-              src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template.webp"
-              alt=""
-            />
-          </div>
-          <div className="h-96 w-full border-2 overflow-hidden border-gray-700">
-            <img
-              className="scale-100 ease-in duration-200 hover:scale-105"
-              src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template.webp"
-              alt=""
-            />
-          </div>
-          <div className="h-96 w-full border-2 overflow-hidden border-gray-700">
-            <img
-              className="scale-100 ease-in duration-200 hover:scale-105"
-              src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template.webp"
-              alt=""
-            />
+            {/* card  */}
+            <div className=" p-20 border border-gray-400 w-full">
+              <img
+                className=""
+                src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template.webp"
+                alt=""
+              />
+              <div className="">
+                <div className="mt-10 flex items-center ">
+                  <span className="bg-white px-2 py-2 text-lg mr-3">01</span>{' '}
+                  <p className="text-white">One Air Parking</p>
+                </div>
+                <p className="text-white mt-8">
+                  Crio sites personalizados e estratégicos para empresas e
+                  startups. Utilizo as melhores ferramentas e estratégias
+                  disponíveis no mercado para garantir que seu site reflita a
+                  identidade da sua marca, aumente sua visibilidade online e
+                  melhore sua presença digital.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -9,36 +9,36 @@ export const Header = () => {
   return (
     <header
       id="header"
-      className=" flex content-center bg-slate-50 h-screen relative overflow-hidden"
+      className=" flex content-center bg-black h-screen relative overflow-hidden"
     >
       <nav className="container mx-auto px-4 py-8  flex justify-between fixed left-0 right-0 top-0 z-20">
         <Link href="/" className="mix-blend-exclusion">
-          <h1 className="	 text-black">
-            SILAS <br /> AFRA.
+          <h1 className="text-white">
+            Silas <br />
+            Afra
           </h1>
         </Link>
         <NavMenu />
       </nav>
 
-      <div className="container mx-auto px-4 py-8 relative flex items-center justify-center flex-col ">
-        <div className="w-full font-bold relative">
-          <p className="text-4xl md:text-9xl monument  ">FREELANCER</p>
-          <p className="text-4xl md:text-9xl text-right monument">DEVELOPER</p>
-          <p className="text-4xl md:text-9xl monument">+ DESIGNER</p>
-          <div className="absolute top-0">
-            <FreelancerStroke />
-          </div>
-          <div className="absolute top-1/2 bottom-1/2 translate-y-1/2">
-            <DeveloperStroke />
-          </div>
-          <div className="absolute bottom-0 left-0">
-            <DesignerStroke />
-          </div>
+      <div className="container mx-auto px-4 py-8 relative flex items-start justify-center flex-col">
+        <div>
+          <h2 className="text-gray-500 text-[6vw] lg:text-[5vw] ">
+            <span className="text-white">Design </span>
+            e <br /> <span className="text-white">Desenvolvimento </span> <br />
+            que Impressionam.
+          </h2>
         </div>
-        <div className="bg-black mt-10 py-6 px-8  text-white font-bold flex gap-2 hover:bg-black/90 cursor-pointer">
-          Entre em Contato <ArrowUpRight />
+
+        <div className="bg-white mt-10 py-4 px-6 rounded-xl  text-black font-bold flex items-center justify-center gap-2 hover:bg-white/70 cursor-pointer duration-300">
+          Vamos conversar <ArrowUpRight />
         </div>
       </div>
+      <img
+        src="../logo-bg.png"
+        alt=""
+        className="absolute bottom-0 right-0 w-full"
+      />
     </header>
   );
 };

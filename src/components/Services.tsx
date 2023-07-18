@@ -16,12 +16,11 @@ export const Services = () => {
             <div className="flex">
               <p className=" mr-3 md:mr-24">01</p>
               <h3 className="text-lg md:text-5xl font-bold mb-2">
-                Brand Strategy
+                Criação de Sites
               </h3>
             </div>
             <p className="text-base font-normal w-full lg:w-72">
-              Eu silas crio sites personalizados e estratégicos para empresas e
-              startups.
+              Websites Personalizados que Impulsionam sua Presença Online.
             </p>
           </div>
           {/* separador */}
@@ -29,14 +28,13 @@ export const Services = () => {
           {/* card */}
           <div className="flex  flex-col md:flex-row pt-10 mb-10 justify-between content-center">
             <div className="flex">
-              <p className=" mr-3 md:mr-24">01</p>
+              <p className=" mr-3 md:mr-24">02</p>
               <h3 className="text-lg md:text-5xl font-bold mb-2">
-                Brand Strategy
+                Criação de Landing pages
               </h3>
             </div>
             <p className="text-base font-normal w-full lg:w-72">
-              Eu silas crio sites personalizados e estratégicos para empresas e
-              startups.
+              Landing Pages Persuasivas que Convertem Visitantes em Clientes.
             </p>
           </div>
           {/* separador */}
@@ -44,14 +42,12 @@ export const Services = () => {
           {/* card */}
           <div className="flex  flex-col md:flex-row pt-10 mb-10 justify-between content-center">
             <div className="flex">
-              <p className=" mr-3 md:mr-24">01</p>
-              <h3 className="text-lg md:text-5xl font-bold mb-2">
-                Brand Strategy
-              </h3>
+              <p className=" mr-3 md:mr-24">03</p>
+              <h3 className="text-lg md:text-5xl font-bold mb-2">Web Design</h3>
             </div>
             <p className="text-base font-normal w-full lg:w-72">
-              Eu silas crio sites personalizados e estratégicos para empresas e
-              startups.
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout.
             </p>
           </div>
           {/* separador */}
@@ -59,14 +55,13 @@ export const Services = () => {
           {/* card */}
           <div className="flex  flex-col md:flex-row pt-10 mb-10 justify-between content-center">
             <div className="flex">
-              <p className=" mr-3 md:mr-24">01</p>
+              <p className=" mr-3 md:mr-24">04</p>
               <h3 className="text-lg md:text-5xl font-bold mb-2">
                 Brand Strategy
               </h3>
             </div>
             <p className="text-base font-normal w-full lg:w-72">
-              Eu silas crio sites personalizados e estratégicos para empresas e
-              startups.
+              Otimização Aperfeiçoada para um Desempenho Superior.
             </p>
           </div>
           {/* separador */}
