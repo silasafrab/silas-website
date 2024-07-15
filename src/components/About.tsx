@@ -1,36 +1,44 @@
-import SilasStroke from './icons/SilasStroke';
+import Image from 'next/image';
 
 export const About = () => {
-  return (
-    <section className="relative overflow-hidden">
-      <div className="absolute">
-        {' '}
-        <SilasStroke />
-      </div>
+    return (
+        <section className="overflow-hidden bg-gray-50 relative">
+            <div className="absolute top-0 left-0 w-full h-full flex justify-between container  mx-auto">
+                <div className="w-[1px] h-full bg-slate-400/10"></div>
+                <div className="w-[1px] h-full bg-slate-400/10"></div>
+                <div className="w-[1px] h-full bg-slate-400/10"></div>
+                <div className="w-[1px] h-full bg-slate-400/10"></div>
+                <div className="w-[1px] h-full bg-slate-400/10"></div>
+                <div className="w-[1px] h-full bg-slate-400/10"></div>
+                <div className="w-[1px] h-full bg-slate-400/10"></div>
+                <div className="w-[1px] h-full bg-slate-400/10"></div>
+            </div>
 
-      <div className="container mx-auto px-4 md:px-32 lg:px-32 py-24  ">
-        <div className="">
-          <p className="text-lg font-bold text-gray-500 mb-3">Sobre mim </p>
-          <h2 className="text-lg md:text-5xl text-gray-800 mb-5">
-            Conheça o profissional por trás dos projetos{' '}
-          </h2>
-          <p className="text-lg font-normal">
-            Comecei minha trajetória profissional como desenvolvedor, criando
-            sistemas e soluções digitais. Há cerca de 3 anos, decidi expandir
-            meus horizontes e mergulhar no universo do design. Foi aí que
-            descobri minha paixão por criar sites que combinem um design
-            atraente e funcionalidade otimizada. Acredito que o design tem o
-            poder de transformar algo simples em algo extraordinário. Por isso,
-            estou sempre comprometido em entregar soluções que unam beleza e
-            funcionalidade, atendendo às necessidades específicas de cada
-            projeto. Com uma abordagem detalhista e minuciosa, busco oferecer a
-            melhor experiência possível tanto para meus clientes quanto para
-            seus usuários finais. É uma honra poder ajudar empresas e
-            empreendedores a alcançar seus objetivos e conquistar novos
-            patamares de sucesso.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
+            <div className="container mx-auto px-4  py-24  ">
+                <div className="flex flex-col items-center relative w-full">
+                    <div className="flex justify-between w-full mb-10">
+                        <p className="text-lg md:text-2xl font-bold text-gray-500 mb-3 opacity-40 monument">/02</p>
+                        <h2 className="text-lg md:text-8xl text-black mb-5 monument-x text-end">Sobre mim</h2>
+                    </div>
+                    <Image src="/image_cta.png" width="545" height="584" alt="" className=" mt-10" />
+                    <div className="max-w-3xl">
+                        <p className="text-gray-200 font-bold monument mb-5">&lt;h /&gt;</p>
+                        <p className="text-lg font-normal monument text-gray-700 ">
+                            Comecei minha trajetória profissional como desenvolvedor, criando sistemas e soluções digitais. Há cerca de 3 anos, decidi expandir meus horizontes e mergulhar no universo
+                            do design. Foi aí que descobri minha paixão por criar sites que combinem um design atraente e funcionalidade otimizada.
+                            <br />
+                            <br />
+                            Acredito que o design tem o poder de transformar algo simples em algo extraordinário. Por isso, estou sempre comprometido em entregar soluções que unam beleza e
+                            funcionalidade, atendendo às necessidades específicas de cada projeto.
+                            <br />
+                            <br />
+                            Com uma abordagem detalhista e minuciosa, busco oferecer a melhor experiência possível tanto para meus clientes quanto para seus usuários finais. É uma honra poder ajudar
+                            empresas e empreendedores a alcançar seus objetivos e conquistar novos patamares de sucesso.
+                        </p>
+                        <p className="text-gray-200 font-bold monument text-end mt-5">&lt;h /&gt;</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 };

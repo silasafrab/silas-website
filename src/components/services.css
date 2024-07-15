@@ -1,0 +1,64 @@
+.card {
+    transition: 500ms ease-in-out;
+    padding-left: 1rem;
+    border-top: rgba(0, 0, 0, 0.2) solid 1px;
+}
+
+.card:last-child {
+    border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
+}
+.card:hover {
+    background: black;
+    color: #fff;
+    padding: 40px 50px;
+}
+
+.card h3 {
+    position: relative;
+}
+.card h3::after {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 4px;
+    width: 50%;
+    transition: 300ms;
+}
+.card:hover h3::after {
+    width: 100%;
+}
+
+.card .number {
+    transition: 200ms;
+}
+.card:hover .number {
+    background: #fff;
+    color: #000;
+    border-radius: 50%;
+}
+
+.card .icon {
+    transition: 300ms ease;
+    position: relative;
+}
+.card .tip {
+    position: absolute;
+    color: #fff;
+    bottom: -18px;
+    font-size: 10px;
+    text-align: center;
+    transition: 400ms;
+    opacity: 0;
+    width: 100px;
+    transform: translateX(15px);
+}
+.card .icon:hover {
+    border-radius: 50%;
+}
+
+.card .icon:hover .tip {
+    opacity: 1;
+    transform: translateX(0);
+}

@@ -1,0 +1,12 @@
+.link-footer .link-btn {
+    transition: 300ms;
+    opacity: 1;
+}
+
+.link-footer .link-btn:hover {
+    border-radius: 50%;
+}
+
+.link-footer:hover .link-btn:not(:hover) {
+    opacity: 0.8;
+}

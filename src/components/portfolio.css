@@ -1,0 +1,53 @@
+.port .port-card {
+    transition: 500ms ease-in-out;
+    filter: grayscale(1);
+}
+
+.port .port-card .title {
+    transform: translateX(10px);
+    transition: 300ms;
+    opacity: 0;
+    color: #fff;
+}
+
+.port .port-card:hover {
+    filter: grayscale(0);
+    color: #fff;
+    background: #000000;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.port .port-card:hover .title {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.col-left {
+    animation: to-left linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 100%;
+}
+.col-right {
+    animation: to-right linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 100%;
+}
+
+@keyframes to-left {
+    from {
+        transform: translateX(400px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes to-right {
+    from {
+        transform: translateX(-400px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

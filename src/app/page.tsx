@@ -6,15 +6,16 @@ import { Portfolio } from '@/components/Portfolio';
 import { Services } from '@/components/Services';
 
 export default function Home() {
-  return (
-    <>
-      <div className="bg-white">
-        <Header />
-        <Services />
-        <About />
-        <Contact />
-      </div>
-      <Footer />
-    </>
-  );
+    return (
+        <>
+            <div className="bg-white">
+                <Header />
+                <About />
+                <Services />
+                <Portfolio />
+                <Contact />
+            </div>
+            <Footer />
+        </>
+    );
 }

@@ -1,64 +1,86 @@
+'use client';
+import Image from 'next/image';
+import '../components/portfolio.css';
+import { useEffect, useRef } from 'react';
+
 export const Portfolio = () => {
-  return (
-    <section className=" bg-black ">
-      <div className="container mx-auto px-4 py-24 bg-black">
-        <div className=" grid grid-cols-2 sm:grid-cols-1 gap-6 md:gap-6 ">
-          <div className="h-333 w-full ">
-            <div className="mb-16">
-              <p className="text-lg font-bold text-gray-400 mb-3">PORTFÓLIO</p>
-              <h2 className="text-5xl text-gray-50 mb-5">Últimos projetos</h2>
-              <p className="text-lg font-normal text-gray-50">
-                Transformando ideias em sites incríveis e funcionais com design
-                elegante e experiência do usuário excepcional.
-              </p>
-            </div>
-          </div>
-          <div className="flex ">
-            {/* card  */}
-            <div className=" p-20 border border-gray-400 w-full">
-              <img
-                className=""
-                src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template.webp"
-                alt=""
-              />
-              <div className="">
-                <div className="mt-10 flex items-center ">
-                  <span className="bg-white px-2 py-2 text-lg mr-3">01</span>{' '}
-                  <p className="text-white">One Air Parking</p>
+    const colLeftRef = useRef(null);
+    const colRightRef = useRef(null);
+
+    useEffect(() => {
+        const colLeft = colLeftRef.current;
+        const colRight = colRightRef.current;
+    });
+    return (
+        <section className="overflow-hidden ">
+            <div className="container mx-auto px-4 pt-24 ">
+                <div className=" grid grid-cols-2 sm:grid-cols-1 gap-6 md:gap-6 ">
+                    <div className="h-333 w-full ">
+                        <div className="flex justify-between w-full mb-10">
+                            <p className="text-lg md:text-2xl font-bold text-gray-500 mb-3 opacity-40 monument">/04</p>
+                            <h2 className="text-lg md:text-8xl text-black mb-5 monument-x text-end">Projetos</h2>
+                        </div>
+                    </div>
+                    <div className="flex "></div>
                 </div>
-                <p className="text-white mt-8">
-                  Crio sites personalizados e estratégicos para empresas e
-                  startups. Utilizo as melhores ferramentas e estratégias
-                  disponíveis no mercado para garantir que seu site reflita a
-                  identidade da sua marca, aumente sua visibilidade online e
-                  melhore sua presença digital.
-                </p>
-              </div>
             </div>
-            {/* card  */}
-            <div className=" p-20 border border-gray-400 w-full">
-              <img
-                className=""
-                src="https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template.webp"
-                alt=""
-              />
-              <div className="">
-                <div className="mt-10 flex items-center ">
-                  <span className="bg-white px-2 py-2 text-lg mr-3">01</span>{' '}
-                  <p className="text-white">One Air Parking</p>
+            <div className="flex flex-col gap-6 port pb-24">
+                <div className="flex gap-6 w-[150%] col-left" ref={colLeftRef}>
+                    <a href="https://www.onairparking.com/" target="_blank">
+                        <div className="bg-gray-200 px-6 pt-8 pb-14 relative port-card ">
+                            <Image src="/img_p_01.png" alt="On air Parking" width={611} height={344} className="w-auto h-[344px]" />
+                            <div className="absolute bottom-3 title">
+                                <p className="monument">On Air Parking</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.capef.com.br/site/plano-cv-i" target="_blank">
+                        <div className="bg-gray-200 px-6 pt-8 pb-14 relative port-card">
+                            <Image src="/img_p_02.png" alt="On air Parking" width={611} height={344} className="w-auto h-[344px]" />
+                            <div className="absolute bottom-3 title">
+                                <p className="monument">CAPEF</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://telecarga.com.br/" target="_blank">
+                        <div className="bg-gray-200 px-6 pt-8 pb-14 relative port-card">
+                            <Image src="/img_p_03.png" alt="On air Parking" width={611} height={344} className="w-auto h-[344px]" />
+                            <div className="absolute bottom-3 title">
+                                <p className="monument">Telecarga</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <p className="text-white mt-8">
-                  Crio sites personalizados e estratégicos para empresas e
-                  startups. Utilizo as melhores ferramentas e estratégias
-                  disponíveis no mercado para garantir que seu site reflita a
-                  identidade da sua marca, aumente sua visibilidade online e
-                  melhore sua presença digital.
-                </p>
-              </div>
+                <div className="flex gap-6 w-[150%] col-right" ref={colRightRef}>
+                    <a href="https://fhopstore.com/" target="_blank">
+                        <div className="bg-gray-200 px-6 pt-8 pb-14 relative port-card">
+                            <Image src="/img_p_04.png" alt="On air Parking" width={611} height={344} className="w-auto h-[344px]" />
+                            <div className="absolute bottom-3 title">
+                                <p className="monument">Phop Store</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div className="bg-gray-200 px-6 pt-8 pb-14 relative port-card">
+                        <Image src="/img_p_05.png" alt="On air Parking" width={611} height={344} className="w-auto h-[344px]" />
+                        <div className="absolute bottom-3 title">
+                            <p className="monument">Saúde Life App</p>
+                        </div>
+                    </div>
+                    <a
+                        href="
+                    https://www.blippy.com.br/"
+                        target="_blank"
+                    >
+                        <div className="bg-gray-200 px-6 pt-8 pb-14 relative port-card">
+                            <Image src="/img_p_06.png" alt="On air Parking" width={611} height={344} className="w-auto h-[344px]" />
+                            <div className="absolute bottom-3 title">
+                                <p className="monument">Blippy</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+    );
 };
