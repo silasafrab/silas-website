@@ -23,31 +23,3 @@
     transform: translateX(0);
 }
 
-.col-left {
-    animation: to-left linear both;
-    animation-timeline: view();
-    animation-range: cover 0% cover 100%;
-}
-.col-right {
-    animation: to-right linear both;
-    animation-timeline: view();
-    animation-range: cover 0% cover 100%;
-}
-
-@keyframes to-left {
-    from {
-        transform: translateX(400px);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes to-right {
-    from {
-        transform: translateX(-400px);
-    }
-    to {
-        transform: translateX(0);
-    }
-}

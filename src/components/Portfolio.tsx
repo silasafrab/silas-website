@@ -2,6 +2,9 @@
 import Image from 'next/image';
 import '../components/portfolio.css';
 import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 export const Portfolio = () => {
     const colLeftRef = useRef(null);
@@ -10,6 +13,29 @@ export const Portfolio = () => {
     useEffect(() => {
         const colLeft = colLeftRef.current;
         const colRight = colRightRef.current;
+
+        gsap.to(colLeft, {
+            ScrollTrigger: {
+                trigger: colLeft,
+                markers: true,
+                start: 'top center',
+                toggleActions: 'play none none reverse',
+                scrub: true
+            },
+            x: 600,
+            duration: 10
+        });
+
+        gsap.fromTo(
+            colRight,
+            {
+                x: 150
+            },
+            {
+                x: -150,
+                duration: 10
+            }
+        );
     });
     return (
         <section className="overflow-hidden ">
