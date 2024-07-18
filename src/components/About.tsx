@@ -18,13 +18,23 @@ export const About = () => {
                 <div className="flex flex-col items-center relative w-full">
                     <div className="flex justify-between w-full mb-10">
                         <p className="text-lg md:text-2xl font-bold text-gray-500 mb-3 opacity-40 monument">/02</p>
-                        <h2 className="text-lg md:text-8xl text-black mb-5 monument-x text-end">Sobre mim</h2>
+                        <h2 className="text-3xl md:text-8xl text-black mb-5 monument-x text-end title">
+                            <span>S</span>
+                            <span>o</span>
+                            <span>b</span>
+                            <span>r</span>
+                            <span>e</span>
+                            <span className="ml-5 lg:ml-10"> </span>
+                            <span>m</span>
+                            <span>i</span>
+                            <span>m</span>
+                        </h2>
                     </div>
-                    <Image src="/image_cta.png" width="545" height="584" alt="" className=" mt-10" />
+                    <Image src="/image_cta.png" width="545" height="584" alt="" className=" lg:mt-10 mb-10" />
                     <div className="max-w-3xl">
                         <p className="text-gray-200 font-bold monument mb-5">&lt;h /&gt;</p>
-                        <p className="text-lg font-normal monument text-gray-700 ">
-                            Comecei minha trajetória profissional como desenvolvedor, criando sistemas e soluções digitais. Há cerca de 3 anos, decidi expandir meus horizontes e mergulhar no universo
+                        <p className=" lg:text-lg text-xs  font-normal monument text-gray-700 ">
+                            Comecei minha trajetória profissional como desenvolvedor, criando sistemas e soluções digitais. Há cerca de 4 anos, decidi expandir meus horizontes e mergulhar no universo
                             do design. Foi aí que descobri minha paixão por criar sites que combinem um design atraente e funcionalidade otimizada.
                             <br />
                             <br />

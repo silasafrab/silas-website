@@ -1,7 +1,6 @@
 import '../components/services.css';
 import IconFigma from './icons/IconFigma';
 import IconXD from './icons/IconXd';
-import IconLinkedin from './icons/IconLinkedin';
 import IconWebflow from './icons/IconWebflow';
 import IconWordpress from './icons/IconWordpress';
 import IconWooCommerce from './icons/IconWooCommerce';
@@ -15,12 +14,22 @@ export const Services = () => {
         <section className="overflow-hidden">
             <div className="container mx-auto px-4 py-24">
                 <div className="flex justify-between w-full mb-10">
-                    <h2 className="text-lg md:text-8xl text-black mb-5 monument-x ">Serviços</h2>
+                    <h2 className="text-3xl md:text-8xl text-black mb-5 monument-x title">
+                        <span>S</span>
+                        <span>e</span>
+                        <span>r</span>
+                        <span>v</span>
+
+                        <span>i</span>
+                        <span>ç</span>
+                        <span>o</span>
+                        <span>s</span>
+                    </h2>
                     <p className="text-lg md:text-2xl font-bold text-gray-500 mb-3 opacity-40 monument text-end">/03</p>
                 </div>
 
                 <div className="flex flex-col">
-                    <div className="card py-10 flex justify-between gap-8 ">
+                    <div className="card py-10 flex flex-col lg:flex-row justify-between gap-8 ">
                         <div className=" flex gap-8 ">
                             <div className="number bg-black w-11 h-11 flex p-2 text-white monument justify-center items-center">01</div>
                             <h3 className="text-lg md:text-5xl font-bold ">Prototipagem de Interface</h3>
@@ -42,7 +51,7 @@ export const Services = () => {
                         </div>
                     </div>
 
-                    <div className="card py-10 flex justify-between gap-8">
+                    <div className="card py-10 flex flex-col lg:flex-row justify-between gap-8 ">
                         <div className=" flex gap-8">
                             <div className="number bg-black w-11 h-11 flex p-2 text-white monument justify-center items-center">02</div>
                             <h3 className="text-lg md:text-5xl font-bold ">Sites Institucionais e Landing Pages</h3>
@@ -64,7 +73,7 @@ export const Services = () => {
                         </div>
                     </div>
 
-                    <div className="card py-10 flex justify-between gap-8">
+                    <div className="card py-10 flex flex-col lg:flex-row justify-between gap-8 ">
                         <div className=" flex gap-8">
                             <div className="number bg-black w-11 h-11 flex p-2 text-white monument justify-center items-center">03</div>
                             <h3 className="text-lg md:text-5xl font-bold ">Criação de Lojas Online</h3>
@@ -85,7 +94,7 @@ export const Services = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="card py-10 flex justify-between gap-8">
+                    <div className="card py-10 flex flex-col lg:flex-row justify-between gap-8 ">
                         <div className=" flex gap-8">
                             <div className="number bg-black w-11 h-11 flex p-2 text-white monument justify-center items-center">04</div>
                             <h3 className="text-lg md:text-5xl font-bold ">Desenvolvimento Web</h3>
@@ -110,7 +119,7 @@ export const Services = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="card py-10 flex justify-between gap-8">
+                    <div className="card py-10 flex flex-col lg:flex-row justify-between gap-8 ">
                         <div className=" flex gap-8">
                             <div className="number bg-black w-11 h-11 flex p-2 text-white monument justify-center items-center">05</div>
                             <h3 className="text-lg md:text-5xl font-bold ">Aplicativos</h3>

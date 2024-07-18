@@ -1,69 +1,55 @@
 'use client';
-import { NavMenu } from './NavMenu';
-import Link from 'next/link';
-import DesignerStroke from './icons/DesignerStroke';
-import FreelancerStroke from './icons/FreelancerStroke';
-import DeveloperStroke from './icons/DeveloperStroke';
-import ArrowUpRight from './icons/ArrowUpRight';
-import StarCircle from './icons/StarCircle';
 
-export const Header = () => {
+import { NavMenu } from './NavMenu';
+import ArrowUpRight from './icons/ArrowUpRight';
+import { useEffect, useRef, useState } from 'react';
+import MarqueeComponent from './marque';
+
+export const Header: React.FC = () => {
+    const videoRef = useRef<HTMLVideoElement | null>(null);
+    const [scrollPosition, setScrollPosition] = useState<number>(0);
+
     return (
-        <header id="header" className=" flex content-center bg-black h-screen relative overflow-hidden">
-            <nav className="container mx-auto px-4 py-8  flex justify-between fixed left-0 right-0 top-0 z-20">
-                <Link href="/" className="mix-blend-exclusion">
+        <header id="header" className="flex content-center bg-black hero relative overflow-hidden">
+            <nav className="container mx-auto px-4 py-8 flex justify-between fixed left-0 right-0 top-0 z-20">
+                <a href="#header" className="mix-blend-exclusion">
                     <h1 className="text-white ">
                         Silas <br />
-                        Afra
+                        Afra .
                     </h1>
-                </Link>
+                </a>
                 <NavMenu />
             </nav>
 
             <div className="container mx-auto px-4 py-8 relative flex items-start justify-center flex-col z-10">
-                <div>
-                    <h2 className="text-gray-500 text-[6vw]  ">
-                        <span className="text-white lg:text-[6vw]">Silas </span>
-                        e <br /> <span className="text-white">Desenvolvimento </span> <br />
-                        que Impressionam.
+                <div className="flex flex-col w-full gap-2">
+                    <p className="text-white lg:text-2xl monument">olá, sou</p>
+                    <h2 className="text-gray-500 text-[6vw]">
+                        <span className="text-white text-6xl lg:text-[6vw] monument-x">Silas Afra</span>
                     </h2>
-                </div>
+                    <div className="text-white text-lg max-w-xs flex flex-col items-end gap-8 self-end mt-6 ">
+                        <p className="text-right">
+                            Desenvolvedor <strong className="font-extrabold text-gray-400">Front-end e UX designer</strong> com mais de 4 anos de experiência na área, moldando interfaces que conectam
+                            pessoas e marcas.
+                        </p>
 
-                <div className="bg-white mt-10 py-4 px-6 rounded-xl  text-black font-bold flex items-center justify-center gap-2 hover:bg-white/70 cursor-pointer duration-300">
-                    Entre em contato <ArrowUpRight />
+                        <a href="#contact">
+                            <div className="flex gap-2 text-white monument hover:tracking-widest ease-in-out duration-300 cursor-pointer">
+                                Contato
+                                <div>
+                                    <ArrowUpRight />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <video loop muted autoPlay className="absolute -z-0 w-auto min-w-full min-h-full max-w-none translate-2/4 opacity-30">
+            <video ref={videoRef} loop muted autoPlay className="absolute -z-0 w-auto min-w-full min-h-full max-w-none translate-2/4 opacity-30">
                 <source src="../background-video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-
-            <div className=" absolute bottom-0 bg-gray-100 p-7 w-full">
-                <div className="flex gap-4 font-bold w-[150%]  marquee justify-center items-center">
-                    <span className="whitespace-nowrap monument text-2xl">FRONT END DEVELOPER</span>
-                    <div className="w-12 h-12 roda-roda  border-gray-500 flex justify-center items-center">
-                        <StarCircle className="" />
-                    </div>
-                    <span className="whitespace-nowrap monument text-2xl">UX DESIGNER</span>
-                    <div className="w-12 h-12 roda-roda  border-gray-500 flex justify-center items-center">
-                        <StarCircle className="" />
-                    </div>
-                    <span className="whitespace-nowrap monument text-2xl">FRONT END DEVELOPER</span>
-                    <div className="w-12 h-12 roda-roda  border-gray-500 flex justify-center items-center">
-                        <StarCircle className="" />
-                    </div>
-                    <span className="whitespace-nowrap monument text-2xl">UX DESIGNER</span>
-                    <div className="w-12 h-12 roda-roda  border-gray-500 flex justify-center items-center">
-                        <StarCircle className="" />
-                    </div>
-                    <span className="whitespace-nowrap monument text-2xl">FRONT END DEVELOPER</span>
-                    <div className="w-12 h-12 roda-roda  border-gray-500 flex justify-center items-center">
-                        <StarCircle className="" />
-                    </div>
-                    <span className="whitespace-nowrap monument text-2xl">UX DESIGNER</span>
-                </div>
-            </div>
+            <MarqueeComponent />
         </header>
     );
 };

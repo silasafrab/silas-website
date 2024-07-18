@@ -23,3 +23,12 @@
     transform: translateX(0);
 }
 
+@media (max-width: 600px) {
+    .port .port-card {
+        background: #000;
+    }
+    .port .port-card .title {
+        opacity: 1;
+        font-size: 12px;
+    }
+}
