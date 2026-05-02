@@ -200,19 +200,22 @@ export default function Waves({
   ]);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const container = containerRef.current;
-    if (!canvas || !container) return;
+    const canvasEl = canvasRef.current;
+    const containerEl = containerRef.current;
+    if (!canvasEl || !containerEl) return;
 
-    const ctx = canvas.getContext("2d");
+    const ctx = canvasEl.getContext("2d");
     if (!ctx) return;
     ctxRef.current = ctx;
 
     function setSize() {
-      const b = container.getBoundingClientRect();
+      const root = containerRef.current;
+      const cvs = canvasRef.current;
+      if (!root || !cvs) return;
+      const b = root.getBoundingClientRect();
       boundingRef.current = { width: b.width, height: b.height };
-      canvas.width = b.width;
-      canvas.height = b.height;
+      cvs.width = b.width;
+      cvs.height = b.height;
     }
 
     function setLines() {
@@ -349,7 +352,9 @@ export default function Waves({
     }
 
     function updateMouse(clientX: number, clientY: number) {
-      const b = container.getBoundingClientRect();
+      const root = containerRef.current;
+      if (!root) return;
+      const b = root.getBoundingClientRect();
       const mouse = mouseRef.current;
       mouse.x = clientX - b.left;
       mouse.y = clientY - b.top;
