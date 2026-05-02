@@ -1,157 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Inter:wght@400;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Cursor personalizado (componente Mouse): esconder o ponteiro nativo só quando ativo */
+html[data-custom-cursor],
+html[data-custom-cursor] * {
+  cursor: none !important;
+}
+
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
-    }
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Inter:wght@400;600;700&display=swap');
+* {
+  scroll-behavior: smooth;
+}
 
 @font-face {
-    font-family: 'monument';
-    src: url('../../public/fontes/monument-extended-regular.otf');
-    font-weight: bold;
-    font-style: normal;
+  font-family: "monument";
+  src: url("../../public/fontes/monument-extended-regular.otf");
+  font-weight: bold;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'monument';
-    src: url('../../public/fontes/monument-extended-ultrabold.otf');
-    font-weight: 900;
-    font-style: normal;
+  font-family: "monument";
+  src: url("../../public/fontes/monument-extended-ultrabold.otf");
+  font-weight: 900;
+  font-style: normal;
 }
 
-html {
-    scroll-behavior: smooth;
-}
 h1,
 h2,
 h3,
 .monument {
-    font-family: 'monument';
-    letter-spacing: 0.005em;
-    line-height: 150%;
+  font-family: "monument";
+  letter-spacing: 0.005em;
+  line-height: 150%;
 }
 .monument-x {
-    font-family: 'monument';
-    font-weight: 900;
+  font-family: "monument";
+  font-weight: 900;
 }
 
 .hero {
-    height: 100dvh;
+  height: 95dvh;
 }
 .monument-font {
-    font-family: 'monument';
+  font-family: "monument";
 }
 
 p {
-    font-family: 'Archivo', sans-serif;
-    letter-spacing: 0.005em !important;
-    line-height: 150% !important;
+  font-family: "Archivo", sans-serif;
+  letter-spacing: 0.005em !important;
+  line-height: 150% !important;
 }
 
 body:before {
-    animation: grain 8s steps(10) infinite;
-    background-image: url(../../public/noise.png);
-    content: '';
-    height: 300%;
-    left: -50%;
-    opacity: 0.3;
-    position: fixed;
-    top: -100%;
-    width: 300%;
-    pointer-events: none;
-    z-index: 9999;
+  animation: grain 8s steps(10) infinite;
+  background-image: url(../../public/noise.png);
+  content: "";
+  height: 300%;
+  left: -50%;
+  opacity: 0.3;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+  pointer-events: none;
+  z-index: 9999;
 }
 
 @keyframes grain {
-    0%,
-    to {
-        transform: translate(0);
-    }
+  0%,
+  to {
+    transform: translate(0);
+  }
 
-    10% {
-        transform: translate(-5%, -10%);
-    }
+  10% {
+    transform: translate(-5%, -10%);
+  }
 
-    20% {
-        transform: translate(-15%, 5%);
-    }
+  20% {
+    transform: translate(-15%, 5%);
+  }
 
-    30% {
-        transform: translate(7%, -25%);
-    }
+  30% {
+    transform: translate(7%, -25%);
+  }
 
-    40% {
-        transform: translate(-5%, 25%);
-    }
+  40% {
+    transform: translate(-5%, 25%);
+  }
 
-    50% {
-        transform: translate(-15%, 10%);
-    }
+  50% {
+    transform: translate(-15%, 10%);
+  }
 
-    60% {
-        transform: translate(15%);
-    }
+  60% {
+    transform: translate(15%);
+  }
 
-    70% {
-        transform: translateY(15%);
-    }
+  70% {
+    transform: translateY(15%);
+  }
 
-    80% {
-        transform: translate(3%, 35%);
-    }
+  80% {
+    transform: translate(3%, 35%);
+  }
 
-    90% {
-        transform: translate(-10%, 10%);
-    }
+  90% {
+    transform: translate(-10%, 10%);
+  }
 }
 
 .marquee {
-    transition: 500ms;
-    display: flex;
-    animation: marquee 80s linear infinite;
+  transition: 500ms;
+  display: flex;
+  animation: marquee 80s linear infinite;
 }
 
 .marquee.reverse {
-    transition: 500ms;
-    animation-direction: reverse;
+  transition: 500ms;
+  animation-direction: reverse;
 }
 
 @keyframes marquee {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 @keyframes spin {
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .title {
-    display: flex;
+  display: flex;
 }
 .title span {
-    transition: 600ms;
-    display: block;
+  transition: 600ms;
+  display: block;
 }
 
 .title span:hover {
-    opacity: 0.5;
-    transform: translateY(-10px);
+  opacity: 0.5;
+  transform: translateY(-10px);
+}
+
+@layer base {
+  .theme {
+    --font-heading: var(--font-sans);
+    --font-sans: var(--font-sans);
+  }
+  :root {
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.205 0 0);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.97 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.922 0 0);
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --radius: 0.625rem;
+    --radius-md: var(--radius);
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+  }
+  .dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.922 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+  }
+  * {
+    @apply border-border;
+    outline-color: color-mix(in oklch, var(--ring) 50%, transparent);
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
 }

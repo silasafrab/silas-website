@@ -1,21 +1,7 @@
-import { About } from '@/components/About';
-import { Contact } from '@/components/Contact';
-import { Footer } from '@/components/Footer';
-import { Header } from '@/components/Header';
-import { Portfolio } from '@/components/Portfolio';
-import { Services } from '@/components/Services';
+import { routing } from "@/i18n/routing";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-    return (
-        <>
-            <div className="bg-white">
-                <Header />
-                <About />
-                <Services />
-                <Portfolio />
-                <Contact />
-            </div>
-            <Footer />
-        </>
-    );
+/** Rota `/` explícita: evita bug de HMR do Turbopack com árvore só `[locale]`. */
+export default function RootPage() {
+  redirect(`/${routing.defaultLocale}`);
 }

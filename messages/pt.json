@@ -1,0 +1,72 @@
+{
+  "Metadata": {
+    "title": "Silas Afra",
+    "description": "Criação de sites profissionais e personalizados para impulsionar o seu negócio. Transformamos suas ideias em realidade digital, oferecendo soluções de design modernas e funcionais. Maximize sua presença online e conquiste seu público-alvo com um site sob medida."
+  },
+  "Header": {
+    "greeting": "olá, sou",
+    "tagline": "Especializado no desenvolvimento de soluções digitais e sistemas escaláveis, com foco em performance e experiência do usuário.",
+    "roleFrontend": "Desenvolvedor Frontend",
+    "roleBackend": "Desenvolvedor Backend",
+    "roleUx": "UX Designer"
+  },
+  "Nav": {
+    "about": "Sobre",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "openMenu": "Abrir navegação",
+    "closeMenu": "Fechar navegação",
+    "langPt": "PT",
+    "langEn": "EN"
+  },
+  "About": {
+    "title": "Sobre mim",
+    "p1": "Desenvolvedor Fullstack especializado na criação de sistemas e soluções digitais, com foco em performance, escalabilidade e experiência do usuário.",
+    "p2": "Atuo no desenvolvimento de aplicações completas, conectando front-end, back-end e arquitetura para entregar produtos sólidos, eficientes e preparados para crescer.",
+    "p3": "Meu foco é construir soluções bem estruturadas, que atendam às necessidades do negócio com qualidade, consistência e visão de longo prazo."
+  },
+  "Contact": {
+    "heading": "Fale comigo!",
+    "cta": "Entre em contato",
+    "emailSubject": "Solicitação de Serviços de Desenvolvimento Front-End e UX Design",
+    "emailBody": "Olá Silas,\n\nEstou interessado(a) em saber mais sobre os seus serviços de desenvolvimento front-end e UX design. Por favor, entre em contato para discutirmos os detalhes.\n\nObrigado(a),\n[Seu Nome]"
+  },
+  "Footer": {
+    "copyright": "© Copyright {year} | Silas Afra | Todos os direitos reservados."
+  },
+  "Portfolio": {
+    "title": "Projetos",
+    "intro": "Seleção de produtos digitais e plataformas em que colaborei—gestão, e-commerce, logística e presença institucional, com foco em escala e boa experiência para quem usa o sistema.",
+    "viewProject": "Ver projeto",
+    "items": [
+      {
+        "name": "KononiaOne",
+        "description": "Sistema de gestão para igrejas que centraliza membros, grupos, agenda, comunicação e finanças em uma única plataforma, oferecendo organização, automação e escalabilidade para a administração e crescimento da igreja."
+      },
+      {
+        "name": "Menuplus",
+        "description": "Sistema de gestão para restaurantes que centraliza cardápio, pedidos, controle operacional e atendimento em uma única plataforma, otimizando processos e melhorando a eficiência do negócio."
+      },
+      {
+        "name": "On Air Parking",
+        "description": "Plataforma digital de estacionamento que integra busca, comparação e reserva de vagas em múltiplos locais, oferecendo uma experiência rápida, acessível e eficiente para usuários em viagens e deslocamentos urbanos."
+      },
+      {
+        "name": "Blippy",
+        "description": "Solução digital para viagens aéreas que integra busca, monitoramento de preços e descoberta de ofertas, ajudando usuários a encontrar passagens com melhor custo-benefício de forma rápida."
+      },
+      {
+        "name": "Telecarga",
+        "description": "Solução digital para operações logísticas que integra gestão de cargas, rastreamento em tempo real e otimização de entregas, proporcionando mais controle, agilidade e confiabilidade nos processos de transporte."
+      },
+      {
+        "name": "Fhop Store",
+        "description": "Plataforma digital de e-commerce que integra venda de produtos, gestão de pedidos e experiência de compra, oferecendo uma solução completa para comercialização de itens com identidade e propósito, de forma prática e eficiente."
+      },
+      {
+        "name": "CAPEF",
+        "description": "Site institucional desenvolvido para uma entidade de previdência complementar, apresentando informações sobre planos, investimentos, benefícios e governança, com foco em clareza, credibilidade e comunicação com participantes."
+      }
+    ]
+  }
+}

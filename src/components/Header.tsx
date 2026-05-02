@@ -1,55 +1,52 @@
-'use client';
+import { getTranslations } from "next-intl/server";
 
-import { NavMenu } from './NavMenu';
-import ArrowUpRight from './icons/ArrowUpRight';
-import { useEffect, useRef, useState } from 'react';
-import MarqueeComponent from './marque';
+import BlurText from "./BlurText";
+import { HeroPortrait } from "./HeroPortrait";
+import { RotatingRoleBlur } from "./RotatingRoleBlur";
 
-export const Header: React.FC = () => {
-    const videoRef = useRef<HTMLVideoElement | null>(null);
-    const [scrollPosition, setScrollPosition] = useState<number>(0);
+export async function Header() {
+    const t = await getTranslations("Header");
 
     return (
-        <header id="header" className="flex content-center bg-black hero relative overflow-hidden">
-            <nav className="container mx-auto px-4 py-8 flex justify-between fixed left-0 right-0 top-0 z-20">
-                <a href="#header" className="mix-blend-exclusion">
-                    <h1 className="text-white ">
-                        Silas <br />
-                        Afra .
-                    </h1>
-                </a>
-                <NavMenu />
-            </nav>
-
+        <header
+            id="header"
+            className="flex content-center   hero relative overflow-hidden"
+        >
             <div className="container mx-auto px-4 py-8 relative flex items-start justify-center flex-col z-10">
-                <div className="flex flex-col w-full gap-2">
-                    <p className="text-white lg:text-2xl monument">olá, sou</p>
-                    <h2 className="text-gray-500 text-[6vw]">
-                        <span className="text-white text-6xl lg:text-[6vw] monument-x">Silas Afra</span>
-                    </h2>
-                    <div className="text-white text-lg max-w-xs flex flex-col items-end gap-8 self-end mt-6 ">
-                        <p className="text-right">
-                            Desenvolvedor <strong className="font-extrabold text-gray-400">Front-end e UX designer</strong> com mais de 4 anos de experiência na área, moldando interfaces que conectam
-                            pessoas e marcas.
-                        </p>
-
-                        <a href="#contact">
-                            <div className="flex gap-2 text-white monument hover:tracking-widest ease-in-out duration-300 cursor-pointer">
-                                Contato
-                                <div>
-                                    <ArrowUpRight />
-                                </div>
-                            </div>
-                        </a>
+                <BlurText
+                    text={t("greeting")}
+                    delay={100}
+                    animateBy="words"
+                    direction="top"
+                    className="lg:text-2xl monument"
+                />
+                <div className="flex justify-between flex-col md:flex-row  w-full gap-2">
+                    <div className="">
+                        <BlurText
+                            text="Silas Afra"
+                            delay={200}
+                            animateBy="words"
+                            direction="top"
+                            className="text-6xl mb-8 monument"
+                        />
+                    </div>
+                    <div className="max-w-md text-left  md:text-right opacity-50">
+                        <BlurText
+                            text={t("tagline")}
+                            delay={300}
+                            animateBy="words"
+                            direction="top"
+                            className="text-lg "
+                        />
                     </div>
                 </div>
+                <div className=" w-full mt-4 md:mt-0">
+                    <HeroPortrait />
+                </div>
+                <div className=" w-full flex justify-end">
+                    <RotatingRoleBlur />
+                </div>
             </div>
-
-            <video ref={videoRef} loop muted autoPlay className="absolute -z-0 w-auto min-w-full min-h-full max-w-none translate-2/4 opacity-30">
-                <source src="../background-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-            <MarqueeComponent />
         </header>
     );
-};
+}

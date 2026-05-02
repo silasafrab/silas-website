@@ -1,0 +1,72 @@
+{
+  "Metadata": {
+    "title": "Silas Afra",
+    "description": "Professional, tailored websites that help your business stand out. We turn ideas into a solid digital presence with modern design and solid UX—so you can reach the right audience with a site built for your goals."
+  },
+  "Header": {
+    "greeting": "hello, I'm",
+    "tagline": "Focused on scalable digital solutions, with emphasis on performance and user experience.",
+    "roleFrontend": "Frontend Developer",
+    "roleBackend": "Backend Developer",
+    "roleUx": "UX Designer"
+  },
+  "Nav": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "openMenu": "Open navigation",
+    "closeMenu": "Close navigation",
+    "langPt": "PT",
+    "langEn": "EN"
+  },
+  "About": {
+    "title": "About me",
+    "p1": "Fullstack developer focused on building digital systems and products with strong performance, scalability, and user experience.",
+    "p2": "I build end-to-end applications, connecting front-end, back-end, and architecture to deliver solid, efficient products that are ready to grow.",
+    "p3": "My goal is to ship well-structured solutions that meet business needs with quality, consistency, and a long-term mindset."
+  },
+  "Contact": {
+    "heading": "Get in touch!",
+    "cta": "Contact me",
+    "emailSubject": "Inquiry: Front-end development & UX design services",
+    "emailBody": "Hi Silas,\n\nI’d like to learn more about your front-end development and UX design services. Please get in touch so we can discuss the details.\n\nThanks,\n[Your name]"
+  },
+  "Footer": {
+    "copyright": "© Copyright {year} | Silas Afra | All rights reserved."
+  },
+  "Portfolio": {
+    "title": "Projects",
+    "intro": "A sample of shipped work—digital products across operations, e-commerce, logistics, and institutional sites, built for scale and a solid experience for users and admins.",
+    "viewProject": "View project",
+    "items": [
+      {
+        "name": "KononiaOne",
+        "description": "Church management software that brings members, groups, scheduling, communication, and finances together in one platform—helping leadership run operations with clarity, automation, and room to grow."
+      },
+      {
+        "name": "Menuplus",
+        "description": "Restaurant management system that unifies menu, orders, day-to-day operations, and service in one place—streamlining workflows and improving efficiency."
+      },
+      {
+        "name": "On Air Parking",
+        "description": "Digital parking platform to search, compare, and book spaces across locations—fast, accessible, and efficient for travel and city trips."
+      },
+      {
+        "name": "Blippy",
+        "description": "Air travel product that combines search, price tracking, and deal discovery so travelers can find better-value flights more quickly."
+      },
+      {
+        "name": "Telecarga",
+        "description": "Logistics platform for shipment management, real-time tracking, and delivery optimization—more control, speed, and reliability across transport operations."
+      },
+      {
+        "name": "Fhop Store",
+        "description": "E-commerce experience covering product sales, order management, and checkout—an end-to-end storefront with a clear brand story."
+      },
+      {
+        "name": "CAPEF",
+        "description": "Institutional site for a supplementary pension provider—plans, investments, benefits, and governance communicated with clarity and trust for participants."
+      }
+    ]
+  }
+}

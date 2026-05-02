@@ -1,142 +1,167 @@
-'use client';
-import Image from 'next/image';
-import '../components/portfolio.css';
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+"use client";
+import "./portfolio.css";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
+
+import AnimatedContent from "./AnimatedContent";
+import BlurText from "./BlurText";
+
+/** Desktop: texto sobe suavemente; mobile igual à coluna (de cima para baixo). */
+const PORT_ROW_BODY_MD = {
+    distance: 32,
+    direction: "vertical" as const,
+    reverse: false,
+};
+
+const PORT_ROW_MEDIA_MD = {
+    distance: 72,
+    direction: "horizontal" as const,
+    reverse: true,
+};
+
+const WORK_META = [
+    {
+        link: "https://www.koinoniaone.com",
+        img: "/img_feature_01.png",
+    },
+    {
+        link: "https://menuplusapp.com/",
+        img: "/img_feature_02.png",
+    },
+    {
+        link: "https://www.onairparking.com/",
+        img: "/img_feature_03.png",
+    },
+    {
+        link: "https://www.blippy.com.br/",
+        img: "/img_feature_04.png",
+    },
+    {
+        link: "https://telecarga.com.br/",
+        img: "/img_feature_05.png",
+    },
+    {
+        link: "https://www.fhopstore.com/",
+        img: "/img_feature_06.png",
+    },
+    {
+        link: "https://www.capef.com.br/",
+        img: "/img_feature_07.png",
+    },
+] as const;
+
+type PortfolioItem = { name: string; description: string };
 
 export const Portfolio = () => {
-    const colLeftRef = useRef(null);
-    const colRightRef = useRef(null);
-    const titleRef = useRef(null);
+    const t = useTranslations("Portfolio");
+    const items = t.raw("items") as PortfolioItem[];
 
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        const colLeft = colLeftRef.current;
-        const colRight = colRightRef.current;
-        const title = titleRef.current;
-        gsap.fromTo(
-            title,
-            {
-                y: '40px',
-                opacity: 0.5
-            },
-            {
-                y: '0',
+    const viewLabel = t("viewProject");
 
-                opacity: 1,
-                scrollTrigger: {
-                    // markers: true,
-                    trigger: '#project',
-                    start: 'top 600px',
-                    end: 'bottom 10px',
-                    scrub: true
-                }
-            }
-        );
-
-        gsap.fromTo(
-            colLeft,
-            {
-                x: '100px'
-            },
-            {
-                x: '-100px',
-                duration: 10,
-                scrollTrigger: {
-                    // markers: true,
-                    trigger: '#project',
-                    start: 'top 600px',
-                    end: 'bottom 10px',
-                    scrub: true
-                }
-            }
-        );
-        gsap.fromTo(
-            colRight,
-            {
-                x: '-100px'
-            },
-            {
-                x: '100px',
-                duration: 10,
-                scrollTrigger: {
-                    // markers: true,
-                    trigger: '#project',
-                    start: 'top 600px',
-                    end: 'bottom 10px',
-                    scrub: true
-                }
-            }
-        );
-    });
     return (
-        <section className="overflow-hidden " id="project">
-            <div className="container mx-auto px-4 pt-24 ">
-                <div className="flex justify-between w-full mb-10">
-                    <p className="text-lg md:text-2xl font-bold text-gray-500 mb-3 opacity-40 monument">/04</p>
-                    <h2 className="text-3xl md:text-8xl text-black mb-5 monument-x " ref={titleRef}>
-                        Projetos
-                    </h2>
-                </div>
-            </div>
-            <div className="flex flex-col gap-6 port pb-24">
-                <div className="flex gap-6 w-[150%] col-left" ref={colLeftRef}>
-                    <a href="https://www.onairparking.com/" target="_blank" className="bg-gray-200 px-6 pt-8 pb-14 relative port-card">
-                        <div className="">
-                            <Image src="/img_p_01.png" alt="On air Parking" width={611} height={344} className="[102px] lg:w-auto lg:h-[344px]" />
-                            <div className="absolute bottom-3 title">
-                                <p className="monument">On Air Parking</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://www.capef.com.br/site/plano-cv-i" target="_blank" className="bg-gray-200 px-6 pt-8 pb-14 relative port-card">
-                        <div className="">
-                            <Image src="/img_p_02.png" alt="On air Parking" width={611} height={344} className="[102px] lg:w-auto lg:h-[344px]" />
-                            <div className="absolute bottom-3 title">
-                                <p className="monument">CAPEF</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://telecarga.com.br/" target="_blank" className="bg-black lg:bg-gray-200 p-6 pb-9 lg:px-6 lg:pt-8 lg:pb-14 relative port-card">
-                        <div className="   ">
-                            <Image src="/img_p_03.png" alt="On air Parking" width={611} height={344} className="[102px] lg:w-auto lg:h-[344px]" />
-                            <div className="absolute bottom-3 title">
-                                <p className="monument">Telecarga</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div className="flex gap-6 w-[150%] col-right" ref={colRightRef}>
-                    <a href="https://fhopstore.com/" target="_blank" className="bg-gray-200 px-6 pt-8 pb-14 relative port-card">
-                        <div className="">
-                            <Image src="/img_p_04.png" alt="On air Parking" width={611} height={344} className="[102px] lg:w-auto lg:h-[344px]" />
-                            <div className="absolute bottom-3 title">
-                                <p className="monument">Phop Store</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <div className="bg-gray-200 px-6 pt-8 pb-14 relative port-card">
-                        <Image src="/img_p_05.png" alt="On air Parking" width={611} height={344} className="[102px] lg:w-auto lg:h-[344px]" />
-                        <div className="absolute bottom-3 title">
-                            <p className="monument">Saúde Life App</p>
-                        </div>
+        <section className="relative overflow-x-clip" id="works">
+            <div className="container mx-auto px-4 py-24 ">
+                <div className="flex justify-between flex-col md:flex-row  w-full gap-2">
+                    <div className="">
+                        <BlurText
+                            as="h2"
+                            text={t("title")}
+                            delay={100}
+                            animateBy="words"
+                            direction="top"
+                            className="w-full text-4xl"
+                        />
                     </div>
-                    <a
-                        href="
-                    https://www.blippy.com.br/"
-                        target="_blank"
-                        className="bg-gray-200 px-6 pt-8 pb-14 relative port-card"
-                    >
-                        <div className="">
-                            <Image src="/img_p_06.png" alt="On air Parking" width={611} height={344} className="[102px] lg:w-auto lg:h-[344px]" />
-                            <div className="absolute bottom-3 title">
-                                <p className="monument">Blippy</p>
-                            </div>
-                        </div>
-                    </a>
+                    <BlurText
+                        text={t("intro")}
+                        delay={100}
+                        animateBy="words"
+                        direction="top"
+                        className="max-w-md w-full text-left md:text-right md:ml-auto opacity-50"
+                    />
                 </div>
+                <div className="mt-20">
+                    {items.map((item, index) => {
+                        const meta = WORK_META[index];
+                        if (!meta) return null;
+                        return (
+                            <div
+                                key={item.name}
+                                className="w-full border-t group border-black/20 py-10 bg-white sticky top-0"
+                            >
+                                <div className="flex flex-col md:flex-row gap-5 justify-between md:items-start">
+                                    <div className="w-40 shrink-0  group-hover:pl-10 duration-300">
+                                        <BlurText
+                                            as="span"
+                                            text={item.name}
+                                            delay={100}
+                                            animateBy="words"
+                                            direction="top"
+                                            className="monument text-lg"
+                                        />
+                                    </div>
+
+                                    <AnimatedContent
+                                        className="max-w-md w-full flex-1 min-w-0"
+                                        scrollStart="top bottom"
+                                        duration={0.82}
+                                        ease="power3.out"
+                                        delay={0.06}
+                                        initialOpacity={0}
+                                        distance={36}
+                                        direction="vertical"
+                                        reverse
+                                        scale={1}
+                                        mdOverrides={PORT_ROW_BODY_MD}
+                                    >
+                                        <p className="opacity-50 mb-10">{item.description}</p>
+                                        <Link
+                                            href={meta.link}
+                                            target="_blank"
+                                            className="underline hidden md:block"
+                                        >
+                                            {viewLabel}
+                                        </Link>
+                                    </AnimatedContent>
+
+                                    <AnimatedContent
+                                        className="w-full shrink-0 md:w-auto md:max-w-[368px] group-hover:pr-10 duration-300"
+                                        scrollStart="top bottom"
+                                        duration={0.85}
+                                        ease="power3.out"
+                                        delay={0.12}
+                                        initialOpacity={0}
+                                        distance={44}
+                                        direction="vertical"
+                                        reverse
+                                        scale={1}
+                                        mdOverrides={PORT_ROW_MEDIA_MD}
+                                    >
+                                        <Image
+                                            src={meta.img}
+                                            width={368}
+                                            height={206}
+                                            alt={item.name}
+                                            className="w-full h-auto max-w-[368px] ml-auto md:ml-0 block"
+                                        />
+                                        <div className="mt-4 w-full flex md:hidden justify-end">
+                                            <Link
+                                                href={meta.link}
+                                                target="_blank"
+                                                className="underline"
+                                            >
+                                                {viewLabel}
+                                            </Link>
+                                        </div>
+                                    </AnimatedContent>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+
             </div>
         </section>
     );
