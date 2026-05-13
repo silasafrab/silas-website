@@ -28,7 +28,7 @@ export function RotatingRoleBlur() {
       delay={400}
       animateBy="words"
       direction="top"
-      className="text-4xl  monument text-right"
+      className="text-2xl md:text-4xl  monument text-right"
     />
   );
 }

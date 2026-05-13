@@ -21,7 +21,7 @@ export async function Footer() {
               <IconBehance width={24} height={24} />
             </div>
           </a>
-          <a href="https://github.com/silasafra" target="_blank">
+          <a href="https://github.com/silasafrab" target="_blank">
             <div className=" bg-black link-btn p-3 cursor-pointer">
               <IconDribbble width={24} height={24} />
             </div>

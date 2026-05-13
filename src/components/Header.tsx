@@ -27,7 +27,7 @@ export async function Header() {
                             delay={200}
                             animateBy="words"
                             direction="top"
-                            className="text-6xl mb-8 monument"
+                            className="md:text-6xl text-4xl mb-4 md:mb-8 monument"
                         />
                     </div>
                     <div className="max-w-md text-left  md:text-right opacity-50">

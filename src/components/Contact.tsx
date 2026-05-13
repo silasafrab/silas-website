@@ -52,9 +52,12 @@ export async function Contact() {
                 <IconWhatsapp width={24} height={24} />
               </div>
             </a>
-            <div className=" bg-black  hover:bg-black/80 link-btn p-3 cursor-pointer">
-              <IconTelegram width={24} height={24} />
-            </div>
+            <a href="https://t.me/silasafra" target="_blank" className="">
+
+              <div className=" bg-black  hover:bg-black/80 link-btn p-3 cursor-pointer">
+                <IconTelegram width={24} height={24} />
+              </div>
+            </a>
             <a href="https://www.linkedin.com/in/silasafra/" target="_blank">
               <div className=" bg-black  hover:bg-black/80 link-btn p-3 cursor-pointer">
                 <IconLinkedin width={24} height={24} />
