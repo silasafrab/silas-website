@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 
 import "./footer.css";
 
@@ -6,8 +6,15 @@ import IconBehance from "./icons/IconBehance";
 import IconCV from "./icons/IconCV";
 import IconDribbble from "./icons/IconGitHub";
 
+const cvByLocale = {
+  pt: "/Curriculo_Silas_Afra_PT.pdf",
+  en: "/Curriculo_Silas_Afra_EN.pdf",
+} as const;
+
 export async function Footer() {
   const t = await getTranslations("Footer");
+  const locale = await getLocale();
+  const cvHref = cvByLocale[locale as keyof typeof cvByLocale] ?? cvByLocale.pt;
   const year = new Date().getFullYear();
 
   return (
@@ -26,7 +33,7 @@ export async function Footer() {
               <IconDribbble width={24} height={24} />
             </div>
           </a>
-          <a href="/silas_afra_CV.pdf" target="_blank">
+          <a href={cvHref} target="_blank">
             <div className=" bg-black  link-btn p-3 cursor-pointer">
               <IconCV width={24} height={24} />
             </div>
