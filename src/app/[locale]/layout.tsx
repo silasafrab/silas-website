@@ -5,6 +5,7 @@ import { Geist, Inter } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { Analytics } from "@vercel/analytics/next";
 import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { Mouse } from "@/components/ui/mouse";
