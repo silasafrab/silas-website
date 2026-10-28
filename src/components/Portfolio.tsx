@@ -27,7 +27,7 @@ const WORK_META = [
         img: "/img_feature_01.png",
     },
     {
-        link: "https://menuplusapp.com/",
+        link: "https://happymenu.com.br/",
         img: "/img_feature_02.png",
     },
     {
@@ -52,7 +52,7 @@ const WORK_META = [
     },
 ] as const;
 
-type PortfolioItem = { name: string; description: string };
+type PortfolioItem = { name: string; description: string; imageAlt?: string };
 
 export const Portfolio = () => {
     const t = useTranslations("Portfolio");
@@ -143,7 +143,7 @@ export const Portfolio = () => {
                                             src={meta.img}
                                             width={368}
                                             height={206}
-                                            alt={item.name}
+                                            alt={item.imageAlt ?? item.name}
                                             className="w-full h-auto max-w-[368px] ml-auto md:ml-0 block"
                                         />
                                         <div className="mt-4 w-full flex md:hidden justify-end">

@@ -44,8 +44,9 @@
         "description": "Church management software that brings members, groups, scheduling, communication, and finances together in one platform—helping leadership run operations with clarity, automation, and room to grow."
       },
       {
-        "name": "Menuplus",
-        "description": "Restaurant management system that unifies menu, orders, day-to-day operations, and service in one place—streamlining workflows and improving efficiency."
+        "name": "Happy Menu",
+        "description": "SaaS platform for restaurants that brings digital menus, orders, delivery, and PIX payments into one flow—simplifying operations from dine-in to delivery and improving the customer experience.",
+        "imageAlt": "Screenshot of the Happy Menu homepage highlighting orders, digital menu, and restaurant operations."
       },
       {
         "name": "On Air Parking",

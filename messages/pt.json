@@ -44,8 +44,9 @@
         "description": "Sistema de gestão para igrejas que centraliza membros, grupos, agenda, comunicação e finanças em uma única plataforma, oferecendo organização, automação e escalabilidade para a administração e crescimento da igreja."
       },
       {
-        "name": "Menuplus",
-        "description": "Sistema de gestão para restaurantes que centraliza cardápio, pedidos, controle operacional e atendimento em uma única plataforma, otimizando processos e melhorando a eficiência do negócio."
+        "name": "Happy Menu",
+        "description": "Plataforma SaaS para restaurantes que integra cardápio digital, pedidos, entrega e pagamento via PIX em um único fluxo, simplificando a operação do salão ao delivery e melhorando a experiência de quem compra.",
+        "imageAlt": "Captura da página inicial do Happy Menu, com destaque para pedidos, cardápio digital e operação de restaurante."
       },
       {
         "name": "On Air Parking",
